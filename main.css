@@ -22,21 +22,21 @@
     align-items: center;
   }
   
-  .section-b {
-    width: 50%;
-    height: 95vh;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .text-section {
-    width: 120%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+.section-b {
+  width: 50%;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+}
+
+.text-section {
+  width: 120%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align content to the bottom */
+  align-self: flex-end; /* Align this section to the bottom */
+}
   
   .title p {
     font-size: 50px;
