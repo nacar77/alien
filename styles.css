@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 4;
+    padding: 4;
+    background-color: rgb(87, 223, 241);
+    color: #333;
+}
+
+section {
+    padding: 2em;
+    margin: 1em auto;
+    max-width: 1000px;
+    background-color: rgb(87, 223, 241);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.gallery {
+    text-align: center;
+}
+
+.gallery .photos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: initial;
+    gap: 1em;
+}
+
+.gallery img {
+    max-width: 25%;
+    border-radius: 8px;
+}
