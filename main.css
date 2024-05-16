@@ -46,9 +46,9 @@
   }
   
   .description p{
-    font-size: 16px;
+    font-size: 13px;
     margin-left: 30px;
-    text-align: top;
+    margin-top: 5px;
   }
   
   .container {
