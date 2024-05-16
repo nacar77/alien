@@ -116,9 +116,9 @@
     background-color: #ff3688;
   }
   
-  @media (max-width: 1000px) {
+  @media (max-width: 800px) {
     .section-a {
-      width: 100%;
+      width: 120%;
       height: 15rem;
       margin-top: 60px;
     }
