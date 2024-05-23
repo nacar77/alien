@@ -1,232 +1,183 @@
-body {
-    font-family: 'Times New Roman', Times, serif;
-    background: linear-gradient(to right, #6bbceb, #55f1d0);
-    color: #333;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-}
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background: linear-gradient(to right, #6bbceb, #55f1d0);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
 
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('confetti.png') no-repeat center center;
-    background-size: cover;
-    opacity: 0.1;
-    z-index: -1;
-}
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('confetti.png') no-repeat center center;
+            background-size: cover;
+            opacity: 0.1;
+            z-index: -1;
+        }
 
-.container {
-    text-align: center;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    width: 90%;
-    max-width: 600px;
-    animation: container-fade-in 1s ease-in-out;
-    border: 5px solid #fcb69f;
-    position: relative;
-    z-index: 2;
-}
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 600px;
+            animation: container-fade-in 1s ease-in-out;
+            border: 5px solid #fcb69f;
+            position: relative;
+            z-index: 2;
+        }
 
-@keyframes container-fade-in {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
-}
+        @keyframes container-fade-in {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
 
-h1 {
-    color: #e91e63;
-    animation: fade-in 2s ease-in-out;
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
+        h1 {
+            color: #e91e63;
+            animation: fade-in 2s ease-in-out;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
 
-.birthday-image {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-    margin: 20px 0;
-    animation: slide-in 2s ease-out;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
+        .birthday-image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            margin: 20px 0;
+            animation: slide-in 2s ease-out;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
 
-.video-container {
-    margin: 20px 0;
-    animation: fade-in 2s ease-in-out;
-}
+        .video-container {
+            margin: 20px 0;
+            animation: fade-in 2s ease-in-out;
+        }
 
-video {
-    width: 100%;
-    max-width: 560px;
-    border-radius: 10px;
-    border: 3px solid #e91e63;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
+        video {
+            width: 100%;
+            max-width: 560px;
+            border-radius: 10px;
+            border: 3px solid #e91e63;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
 
-p {
-    font-size: 1.5em;
-    text-align: center;
-    animation: fade-in 3s ease-in-out;
-    margin: 10px 0;
-    color: #555;
-}
+        p {
+            font-size: 1.5em;
+            text-align: center;
+            animation: fade-in 3s ease-in-out;
+            margin: 10px 0;
+            color: #555;
+        }
 
-pre {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 2em;
-    text-align: center;
-    animation: fade-in 3s ease-in-out;
-    margin: 10px 0;
-    color: #08f72f;
-}
+        pre {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2em;
+            text-align: center;
+            animation: fade-in 3s ease-in-out;
+            margin: 10px 0;
+            color: #08f72f;
+        }
 
-@keyframes fade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
 
-@keyframes slide-in {
-    from { transform: translateX(-100%); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-}
+        @keyframes slide-in {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
 
-.fade-in {
-    animation: fade-in 2s ease-in-out;
-}
+        .fade-in {
+            animation: fade-in 2s ease-in-out;
+        }
 
-.slide-in {
-    animation: slide-in 2s ease-out;
-}
+        .slide-in {
+            animation: slide-in 2s ease-out;
+        }
 
-.gift-container {
-    margin-top: 20px;
-    animation: fade-in 2s ease-in-out;
-}
+        .gift-container {
+            margin-top: 20px;
+            animation: fade-in 2s ease-in-out;
+        }
 
-.gift-image {
-    width: 100px;
-    height: auto;
-    animation: gift-bounce 2s infinite;
-}
+        .gift-image {
+            width: 95px;
+            height: auto;
+            margin: 15px;
+            padding: 10px;
+            border: 2px solid #e91e63; /* Add border here */
+            border-radius: 10px; /* Optional: to make the corners rounded */
+            animation: gift-bounce 2s infinite;
+        }
 
-@keyframes gift-bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-20px); }
-    60% { transform: translateY(-10px); }
-}
+        @keyframes gift-bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
 
-#birthdayCanvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
+        #birthdayCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
 
-.card-container {
-    perspective: 1000px;
-    margin-top: 20px;
-}
+        .iloveyou-animation {
+            animation: pulse 2s infinite;
+        }
 
-.card {
-    width: 300px;
-    height: 200px;
-    position: relative;
-    transform-style: preserve-3d;
-    transform: rotateY(0deg);
-    transition: transform 1s;
-    cursor: pointer;
-}
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
 
-.card.is-open {
-    transform: rotateY(180deg);
-}
+        /* Media query for mobile devices */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8em;
+            }
 
-.card-front, .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border: 1px solid #e91e63;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2em;
-    color: #e91e63;
-    background-color: #fff;
-}
+            p {
+                font-size: 1.2em;
+            }
 
-.card-front {
-    background-color: #fcb69f;
-}
+            .birthday-image {
+                max-width: 100%;
+            }
 
-.card-back {
-    transform: rotateY(180deg);
-}
+            video {
+                max-width: 100%;
+            }
 
-#birthdayCanvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
+            .container {
+                padding: 20px;
+            }
 
-.iloveyou-animation {
-    animation: pulse 2s infinite;
-}
+            pre {
+                font-size: 1.5em;
+            }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
-
-/* Media query for mobile devices */
-@media (max-width: 600px) {
-    .card {
-        width: 90%;
-        height: auto;
-    }
-
-    .card-front, .card-back {
-        font-size: 1em;
-    }
-
-    h1 {
-        font-size: 1.8em;
-    }
-
-    p {
-        font-size: 1.2em;
-    }
-
-    .birthday-image {
-        max-width: 100%;
-    }
-
-    video {
-        max-width: 100%;
-    }
-
-    .container {
-        padding: 20px;
-    }
-
-    pre {
-        font-size: 1.5em;
-    }
-}
+            .gift-image {
+                width: 60px;
+                margin: 5px;
+            }
+        }
