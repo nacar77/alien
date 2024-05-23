@@ -67,21 +67,3 @@ window.addEventListener('resize', function() {
     canvas.height = window.innerHeight;
     init();
 });
-
-// Function to open/close the card
-function openCard() {
-    const card = document.querySelector('.card');
-    card.classList.toggle('is-open');
-}
-
-// Load image on card flip
-document.addEventListener("DOMContentLoaded", function() {
-    const cardFront = document.querySelector('.card-front');
-    const cardBack = document.querySelector('.card-back');
-    const img = new Image();
-    img.src = 'b.jpg';
-    img.onload = function() {
-        cardBack.style.backgroundImage = `url('${img.src}')`;
-    }
-});
-
