@@ -1,32 +1,207 @@
 body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #77e0a3; /* Sky blue background */
     font-family: Arial, sans-serif;
-    margin: 4;
-    padding: 4;
-    background-color: rgb(87, 223, 241);
-    color: #333;
+    color: rgb(8, 3, 3);
+    flex-direction: column;
+    font-family: cursive, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url('amore-love-you.gif'); /* Path to your GIF file */
+    background-size: 100% 110%; /* Cover the entire background */
+    background-repeat: no-repeat; /* Do not repeat the background */
+    background-attachment: fixed; /* Fix the background to the viewport */
+    background-position: center; /* Center the background image */
+    height: 100vh;
 }
 
-section {
-    padding: 2em;
-    margin: 1em auto;
-    max-width: 1000px;
-    background-color: rgb(87, 223, 241);
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+/* Bubble effect */
+.bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
 }
 
-.gallery {
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: rise 10s infinite ease-in-out;
+}
+
+.bubble:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    left: 25%;
+    animation-duration: 12s;
+}
+
+.bubble:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    animation-duration: 15s;
+}
+
+.background-box {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    border-radius: 50px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: ;
+    text-align: center;
+    box-sizing: border-box; /* Add this line to include border in sizing */
+    border: 2px solid rgba(114, 97, 97, 0.404); /* Add border outside the box */
+    margin: 15px; /* Add margin */
+}
+
+.bubble:nth-child(1) { width: 40px; height: 40px; left: 10%; animation-duration: 7s; }
+.bubble:nth-child(2) { width: 60px; height: 60px; left: 20%; animation-duration: 5s; }
+.bubble:nth-child(3) { width: 80px; height: 80px; left: 25%; animation-duration: 11s; }
+.bubble:nth-child(4) { width: 50px; height: 50px; left: 40%; animation-duration: 6s; }
+.bubble:nth-child(5) { width: 30px; height: 30px; left: 55%; animation-duration: 9s; }
+.bubble:nth-child(6) { width: 70px; height: 70px; left: 70%; animation-duration: 8s; }
+.bubble:nth-child(7) { width: 50px; height: 50px; left: 80%; animation-duration: 5s; }
+.bubble:nth-child(8) { width: 30px; height: 30px; left: 90%; animation-duration: 7s; }
+.bubble:nth-child(9) { width: 40px; height: 40px; left: 95%; animation-duration: 6s; }
+
+@keyframes rise {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100vh); }
+}
+
+
+/* Keyframes for bubbles */
+@keyframes rise {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-1200px);
+    }
+}
+
+/* Background box styling */
+.background-box {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.404); /* Semi-transparent white */
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.432);
+    z-index: 1;
     text-align: center;
 }
 
-.gallery .photos {
-    display: flex;
-    justify-content: center;
-    flex-wrap: initial;
-    gap: 1em;
+/* Book styling */
+.book {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: #fefefe;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    perspective: 1000px;
+    margin: 0 auto;
 }
 
-.gallery img {
-    max-width: 25%;
-    border-radius: 8px;
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s, z-index 1s;
+}
+
+.page img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-bottom: 2px solid #fff;
+}
+
+.page1 {
+    background-color: #FF69B4; /* Light pink */
+}
+
+.page2 {
+    background-color: #FFB6C1; /* Hot pink */
+}
+.page3 {
+    background-color: #FFB6C1; /* Deep pink */
+}
+.page4 {
+    background-color: #FFB6C1; /* Light pink */
+}
+.page5 {
+    background-color: #FFB6C1; /* Hot pink */
+}
+
+.page6 {
+    background-color: #FFB6C1; /* Deep pink */
+}
+.page7 {
+    background-color: #FFB6C1; /* Light pink */
+}
+.page8 {
+    background-color: #FFB6C1; /* Hot pink */
+}
+.page9 {
+    background-color: #FFB6C1; /* Deep pink */
+}
+.page10 {
+    background-color: #FFB6C1; /* Deep pink */
+}
+.page11 {
+    background-color: #FFB6C1; /* Hot pink */
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #ff69b4;
+}
+
+h1 {
+    text-align: center;
+    margin: 10px;
+}
+
+p {
+    text-align: center;
+    margin: 10px;
+}
+
+.background-box, a {
+    text-align: center;
+    margin: 10px;
+    color: black;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.404); /* Semi-transparent white */
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.432);
+    z-index: 1;
+    text-align: center;
 }
