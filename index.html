@@ -1,88 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sweet Messages For You Alien</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For: My Alien</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for butterfly animation */
+        .stage {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
 
-  <link rel="stylesheet" href="header.css">
-  <link rel="stylesheet" href="main.css">
-  <!--<link rel="stylesheet" href="footer.css">//-->
-  <link rel="stylesheet" href="styles.css">
+        .mariposa {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 0 20px;
+        }
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@900&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,700&family=Shrikhand&display=swap" rel="stylesheet">
-  
+        .mariposa-turn {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform: rotate(0deg);
+            animation: turn 4s infinite;
+        }
 
-  <script src="https://kit.fontawesome.com/effd3867de.js" crossorigin="anonymous"></script>
+        .mariposa-flutter {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('butterfly.png') no-repeat center center;
+            background-size: contain;
+            animation: flutter 0.5s infinite alternate;
+        }
+
+        @keyframes turn {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes flutter {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
 </head>
 <body>
-  
-<div style="text-align: center;">
-  <button onclick="playAudio()">Click to Play</button>
-  <audio id="myAudio" controls>
-    <source src="Nag iisa Part 2 - Vlync (Cover by ICA).mp3" type="audio/ogg">
-    <source src="Nag iisa Part 2 - Vlync (Cover by ICA).mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-</div>
-
-<script>
-  function playAudio() {
-    var audio = document.getElementById("myAudio");
-    audio.play();
-  }
-</script>
-      </div>
-    <section class="gallery">
-    <div class="photos">
-      <img src="photo1.jpg" alt="Memory 1">
-      <img src="photo2.jpg" alt="Memory 2">
-      <img src="photo3.jpg" alt="Memory 3">
-    </section>
-  </div>
-  </section>
-    
-  <main>
-    <div class="section-a">
-      <div class="text-section">
-        <div class="title">
-          <p>MESSAGE FOR MY ALIEN SO, HAPPY MONTHSARRY</p>
-        </div>
-        <div class="description">
-          <p>This love, ours is a rare and precious thing.👽 It's a tapestry woven with laughter, tears, triumphs and vulnerabilities.👽 It's the comfort of a familiar embrace the thrill of discovering new depths within each other and the unwavering belief that together we can face anything.👽 Make them feel loved and valued.
-            I Created this for my alien👽 So, my love to you my once in a lifetime kind of love thank you for everything you are and everything we've built together.👽 Here's to forever etching our story in the stars a testament to a love that burns ever bright.✨"
-            "Distance means so little, when someone means so much.👽 There are no goodbyes for us. Wherever you are you will always be in my heart.👽✨"</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-b">
-      <div class="container">
+    <div class="container">
+        <h1>Happy Monthsary!</h1>
         <div class="message">
-          <div class="border">
-            <p class="textMessage"></p>
-          </div>
+            <p>My Alien, this is our 5th Monthsary</p>
+            <p>
+                The vibrant red of a cardinals wing the deep ebony of a moonless night  these are the colors that swirl within my heart when i think of you. For you are the embodiment of such passionate intensity and mysterious allure.
+            </p>
+            <p>
+                Like the graceful butterfly that dances between the realms of light and dark, our love transcends the boundaries of day and night. Its scarlet flames ignite my very soul, while the shadowy depths of our bond cloak us in a veil of intimate wonder.
+            </p>
+            <p>
+                When crimson kissed wings take flight, I am reminded of the ardent pulses that synchronize our two hearts as one. In the quiet moments we share the flutter of those ebony butterflies whispers secrets of devotion too profound for words.
+            </p>
+            <p>
+                My love for you knows no boundaries of light or dark. It is a love that swells like the scarlet tide powerful and unstoppable. And it is a love that shrouds us in the mysterious allure of the night keeping our most sacred moments safely cloaked in shadow.
+            </p>
+            <p>
+                I love you more than words can express. Happy Monthsary my alien!
+            </p>
+            <p>Forever yours, My  Alien</p>
+            <p>[LissaMay,Jayson]</p>
         </div>
-        <div class="generate">
-          <button id="gen-text">Generate Message</button>
+        <div class="photo-book">
+            <img src="alien1.1.1.jpg" alt="Memory 1" class="photo">
+            <img src="alien1.3.jpg" alt="Memory 2" class="photo">
+            <!-- Add more images as needed -->
         </div>
-      </div>
+        <audio autoplay controls>
+        <source src="music.ogg" type="audio/ogg">
+        <source src="Boyzone - Every Day I Love You (Official Video).mp3" type="audio/mpeg">
+    </audio> 
+    <p>
+        🦋🌻👽🫂💕😘🥰🦋🌻👽🫂💕😘🥰🦋🌻👽🫂💕😘🥰🦋🌻👽🫂💕😘🥰🦋🌻👽🫂
+    </p>
+    <a href="" class="previous">&laquo; Previous</a>
+    <a href="index2.html" class="next">Next &raquo;</a>
     </div>
-  </main>
-  <!--<footer class="footer">
-    <p>👽 Jayson Nacar 👽</p>
-    <div class="socials">
-        <a href="https://www.facebook.com/friendly.jayson1" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100083913429127" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-    </div>
-    <div class="credits">
-      <small> THANK YOU FOR ALWAYS MAKE ME HAPPY EVERY DAY MY ALIEN </small>
-  </div>
-</footer>//-->
+    <div class="stage">
+        <div class="mariposa">
+            <div class="mariposa-turn">
+                <div class="mariposa-flutter"></div>
+            </div>
+        </div>
 
-  <script src="index.js"></script>
+        <div class="mariposa">
+            <div class="mariposa-turn">
+                <div class="mariposa-flutter"></div>
+            </div>
+        </div>
+
+        <div class="mariposa">
+            <div class="mariposa-turn">
+                <div class="mariposa-flutter"></div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
