@@ -217,10 +217,11 @@ a {
 }
 
 .message a {
-    font-size: 1em;
+    font-size: 14px;
     color: #555;
     margin: 15px 0;
     border: #000000;
+    text-align: center;
     
 }
 
