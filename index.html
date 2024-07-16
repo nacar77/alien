@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For: My Alien</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for butterfly animation */
+        .stage {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .mariposa {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 0 20px;
+        }
+
+        .mariposa-turn {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform: rotate(0deg);
+            animation: turn 4s infinite;
+        }
+
+        .mariposa-flutter {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('butterfly.png') no-repeat center center;
+            background-size: contain;
+            animation: flutter 0.5s infinite alternate;
+        }
+
+        @keyframes turn {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes flutter {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Monthsary!</h1>
+        <div class="message">
+            <p>My Alien, this is our 5th Monthsary</p>
+            <p>
+                The vibrant red of a cardinals wing the deep ebony of a moonless night  these are the colors that swirl within my heart when i think of you. For you are the embodiment of such passionate intensity and mysterious allure.
+            </p>
+            <p>
+                Like the graceful butterfly that dances between the realms of light and dark, our love transcends the boundaries of day and night. Its scarlet flames ignite my very soul, while the shadowy depths of our bond cloak us in a veil of intimate wonder.
+            </p>
+            <p>
+                When crimson kissed wings take flight, I am reminded of the ardent pulses that synchronize our two hearts as one. In the quiet moments we share the flutter of those ebony butterflies whispers secrets of devotion too profound for words.
+            </p>
+            <p>
+                My love for you knows no boundaries of light or dark. It is a love that swells like the scarlet tide powerful and unstoppable. And it is a love that shrouds us in the mysterious allure of the night keeping our most sacred moments safely cloaked in shadow.
+            </p>
+            <p>
+                I love you more than words can express. Happy Monthsary my alien!
+            </p>
+            <p>Forever yours, My  Alien</p>
+            <p>[LissaMay,Jayson]</p>
+        </div>
+        <div class="photo-book">
+            <img src="alien1.1.1.jpg" alt="Memory 1" class="photo">
+            <img src="alien1.3.jpg" alt="Memory 2" class="photo">
+            <!-- Add more images as needed -->
+        </div>
+        <audio autoplay controls>
+        <source src="music.ogg" type="audio/ogg">
+        <source src="Boyzone - Every Day I Love You (Official Video).mp3" type="audio/mpeg">
+    </audio> 
+    <p>
+        🦋🌻👽🫂💕😘🥰🦋🌻👽🫂💕😘🥰🦋🌻👽🫂💕😘🥰🦋🌻👽🫂💕😘🥰🦋🌻👽🫂
+    </p>
+    <a href="" class="previous">&laquo; Previous</a>
+    <a href="index2.html" class="next">Next &raquo;</a>
+    </div>
+    <div class="stage">
+        <div class="mariposa">
+            <div class="mariposa-turn">
+                <div class="mariposa-flutter"></div>
+            </div>
+        </div>
+
+        <div class="mariposa">
+            <div class="mariposa-turn">
+                <div class="mariposa-flutter"></div>
+            </div>
+        </div>
+
+        <div class="mariposa">
+            <div class="mariposa-turn">
+                <div class="mariposa-flutter"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
