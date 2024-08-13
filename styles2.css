@@ -26,6 +26,14 @@ h2 {
     text-align: center;
 }
 
+/* Responsive styles for mobile devices */
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 1.5em; /* Adjust font size for mobile */
+        text-align: center; /* Ensure text is centered on mobile */
+    }
+}
+
 p {
     font-family: Arial, sans-serif;
     text-transform: none; /* Ensure no caps lock */
