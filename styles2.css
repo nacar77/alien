@@ -21,16 +21,18 @@ body, html {
 }
 
 h2 {
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 15px;
     position: left;
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
     text-transform: none; /* Ensure no caps lock */
     position: relative;
     /* width: 313px; /* Set the desired width */
+    margin: 15px 0;
+    text-align: center;
 }
 
 * {
