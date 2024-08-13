@@ -59,7 +59,7 @@ audio {
 
 .arrows {
     position: absolute;
-    top: 20px;
+    bottom: 20px;
     right: 50px;
     z-index: 100;
 }
