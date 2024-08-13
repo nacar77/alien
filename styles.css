@@ -287,10 +287,4 @@ header .menu {
         width: 120px;
         height: 180px;
     }
-
-    audio {
-        width: 90%;
-        bottom: 10px;
-        height: 30px;
-    }
 }
