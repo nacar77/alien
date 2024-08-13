@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
-
-body {
-    font-family: Poppins, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    font-family: Poppins;
     margin: 0;
     background-color: #010101;
     color: #eee;
@@ -9,20 +8,20 @@ body {
 
 audio {
     position: fixed;
-    bottom: 18px;
+    bottom: 18px; /* Distance from the top of the viewport */
     left: 50%;
-    transform: translateX(-50%);
-    width: 270px;
-    height: 35px;
-    z-index: 200;
-    border-radius: 10px;
+    transform: translateX(-50%); /* Center horizontally */
+    width: 270px; /* Set the desired width */
+    height: 35px; /* Set the desired height */
+    z-index: 200; /* Ensure audio control is above the slider */
+    border-radius: 10px; /* Optional: Add some rounded corners */
     opacity: .6;
     color: #fff;
     background-color: #000;
 }
 
 .previous, .next {
-    background-color: rgba(238, 238, 238, 0.2);
+    background-color: rgba(238, 238, 238, 0.2); /* Transparent background */
     color: #fff;
     position: fixed;
     bottom: 20px;
@@ -33,7 +32,7 @@ audio {
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s ease, transform 0.3s ease;
-    z-index: 200;
+    z-index: 200; /* Ensure buttons are above the slider */
 }
 
 .previous {
@@ -49,9 +48,15 @@ audio {
     transform: translateY(-2px);
 }
 
+audio {
+    display: block;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
 header {
-    width: 100%;
-    max-width: 1200px;
+    width: 1200px;
+    max-width: 90%;
     margin: auto;
     display: grid;
     grid-template-columns: 50px 1fr 50px;
@@ -80,7 +85,7 @@ header .menu {
     height: 100vh;
     margin-top: -50px;
     position: relative;
-    z-index: 10;
+    z-index: 10; /* Lower z-index than buttons */
 }
 
 .slider .list .item {
@@ -110,12 +115,12 @@ header .menu {
 .slider .list .item .content {
     position: absolute;
     left: 50%;
-    top: 10%;
+    top: 10%; /* Adjust the value to change the vertical position */
     transform: translateX(-50%);
     width: 500px;
     max-width: 80%;
     z-index: 1;
-    text-align: center;
+    text-align: center; /* Center the text content */
 }
 
 .slider .list .item .content p:nth-child(1) {
@@ -224,94 +229,14 @@ header .menu {
     inset: auto 10px 10px 10px;
 }
 
-/* Tablet View */
-@media screen and (max-width: 1024px) {
-    header {
-        grid-template-columns: 40px 1fr 40px;
-        grid-template-rows: 40px;
-    }
-    
-    .slider .list .item .content h2 {
-        font-size: 70px;
-    }
-
-    .slider .list .item .content {
-        width: 90%;
-    }
-
-    .arrows {
-        top: 10%;
-        right: 20px;
-    }
-
-    .previous, .next {
-        padding: 8px 16px;
-        bottom: 15px;
-    }
-
-    .thumbnail {
-        height: 200px;
-        padding: 0 30px;
-    }
-
-    .thumbnail .item {
-        width: 130px;
-        height: 190px;
-    }
-
-    audio {
-        width: 80%;
-        bottom: 15px;
-        height: 30px;
-    }
-}
-
-/* Mobile View */
 @media screen and (max-width: 678px) {
-    header {
-        grid-template-columns: 30px 1fr 30px;
-        grid-template-rows: 40px;
+    .thumbnail {
+        justify-content: start;
     }
-    
     .slider .list .item .content h2 {
-        font-size: 50px;
+        font-size: 60px;
     }
-
-    .slider .list .item .content {
-        width: 95%;
-    }
-
     .arrows {
         top: 10%;
-        right: 10px;
-    }
-
-    .previous, .next {
-        padding: 6px 12px;
-        bottom: 10px;
-    }
-
-    .previous {
-        left: 10px;
-    }
-
-    .next {
-        right: 10px;
-    }
-
-    .thumbnail {
-        height: 180px;
-        padding: 0 20px;
-    }
-
-    .thumbnail .item {
-        width: 120px;
-        height: 160px;
-    }
-
-    audio {
-        width: 90%;
-        bottom: 10px;
-        height: 30px;
     }
 }
