@@ -31,7 +31,7 @@ p1, p2, p3 {
 
 audio {
     position: fixed;
-    bottom: 18px;
+    top: 18px;
     left: 50%;
     transform: translateX(-50%);
     width: 270px;
