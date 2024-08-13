@@ -16,37 +16,53 @@ audio {
     height: 35px;
     z-index: 200;
     border-radius: 10px;
-    opacity: .6;
-    color: #fff;
 }
 
 .previous, .next {
     background-color: rgba(238, 238, 238, 0.2);
     color: #fff;
     position: fixed;
-    bottom: 20px;
-    padding: 10px 20px;
+    bottom: 15px; /* Slightly higher for mobile */
+    padding: 6px 12px; /* Reduced padding for smaller size */
     font-weight: 600;
-    border-radius: 5px;
+    border-radius: 4px; /* Slightly smaller border radius */
     text-transform: uppercase;
     text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3); /* Slightly smaller shadow */
     transition: background-color 0.3s ease, transform 0.3s ease;
     z-index: 200;
+    font-size: 12px; /* Smaller font size */
 }
 
 .previous {
-    left: 20px;
+    left: 10px; /* Closer to the edge on mobile */
 }
 
 .next {
-    right: 20px;
+    right: 10px; /* Closer to the edge on mobile */
 }
 
 .previous:hover, .next:hover {
     background-color: #eee5;
     transform: translateY(-2px);
 }
+
+@media screen and (max-width: 678px) {
+    .previous, .next {
+        padding: 5px 10px; /* Further reduce padding for small screens */
+        font-size: 10px; /* Smaller font size for mobile */
+        bottom: 10px; /* Adjust bottom spacing for mobile */
+    }
+    
+    .previous {
+        left: 8px; /* Slightly closer to the edge */
+    }
+
+    .next {
+        right: 8px; /* Slightly closer to the edge */
+    }
+}
+
 
 header {
     width: 100%;
@@ -159,8 +175,8 @@ header .menu {
 
 .arrows {
     position: absolute;
-    top: 20px;
-    right: 50px;
+    top: 10px; /* Adjusted for smaller size */
+    right: 30px; /* Adjusted for smaller size */
     z-index: 100;
 }
 
@@ -168,10 +184,10 @@ header .menu {
     background-color: #eee5;
     border: none;
     font-family: monospace;
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-    font-size: x-large;
+    width: 30px; /* Reduced width */
+    height: 30px; /* Reduced height */
+    border-radius: 4px; /* Slightly smaller border radius */
+    font-size: large; /* Reduced font size */
     color: #eee;
     transition: .5s;
 }
@@ -180,6 +196,7 @@ header .menu {
     background-color: #eee;
     color: black;
 }
+
 
 .thumbnail {
     position: absolute;
