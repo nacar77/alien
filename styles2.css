@@ -62,10 +62,10 @@ audio {
     background-color: #eee5;
     border: none;
     font-family: monospace;
-    width: 40px;
-    height: 40px;
+    width: 30px; /* Reduced width for mobile */
+    height: 30px; /* Reduced height for mobile */
     border-radius: 5px;
-    font-size: x-large;
+    font-size: large; /* Smaller font size for mobile */
     color: #eee;
     transition: .5s;
 }
@@ -73,6 +73,20 @@ audio {
 .arrows button:hover {
     color: rgb(255, 255, 255);
 }
+
+@media screen and (max-width: 678px) {
+    .arrows {
+        top: 15px; /* Adjusted position for mobile */
+        right: 20px; /* Bring closer to the edge on mobile */
+    }
+
+    .arrows button {
+        width: 25px; /* Further reduced width */
+        height: 25px; /* Further reduced height */
+        font-size: medium; /* Adjusted font size */
+    }
+}
+
 
 :root {
     --width-default: min(1200px, 90vw);
@@ -83,29 +97,47 @@ audio {
     background-color: rgba(238, 238, 238, 0.2);
     color: #fff;
     position: fixed;
-    bottom: 25px;
-    padding: 10px 20px;
+    bottom: 15px; /* Slightly higher for mobile */
+    padding: 6px 12px; /* Reduced padding for smaller size */
     font-weight: 600;
-    border-radius: 5px;
-    text-transform: none; /* Remove caps lock */
+    border-radius: 4px; /* Slightly smaller border radius */
+    text-transform: uppercase;
     text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3); /* Slightly smaller shadow */
     transition: background-color 0.3s ease, transform 0.3s ease;
-    font-family: 'Poppins', sans-serif;
+    z-index: 200;
+    font-size: 12px; /* Smaller font size */
 }
 
 .previous {
-    left: 20px;
+    left: 10px; /* Closer to the edge on mobile */
 }
 
 .next {
-    right: 20px;
+    right: 10px; /* Closer to the edge on mobile */
 }
 
 .previous:hover, .next:hover {
     background-color: #eee5;
     transform: translateY(-2px);
 }
+
+@media screen and (max-width: 678px) {
+    .previous, .next {
+        padding: 5px 10px; /* Further reduce padding for small screens */
+        font-size: 10px; /* Smaller font size for mobile */
+        bottom: 10px; /* Adjust bottom spacing for mobile */
+    }
+    
+    .previous {
+        left: 8px; /* Slightly closer to the edge */
+    }
+
+    .next {
+        right: 8px; /* Slightly closer to the edge */
+    }
+}
+
 
 header {
     width: var(--width-default);
