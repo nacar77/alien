@@ -1,12 +1,11 @@
 @import url('https://fonts.cdnfonts.com/css/bebas-neue');
 @import url('https://fonts.cdnfonts.com/css/poppins');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* Base Styles */
+/* 1200 x 780 */
 body {
     margin: 0;
     background-color: darkslategray;
-    font-family: 'Poppins', sans-serif;
 }
 
 h2 {
@@ -15,11 +14,23 @@ h2 {
     position: left;
 }
 
-p1, p2, p3 {
+p1 {
     font-family: 'Poppins', sans-serif;
-    text-transform: none;
+    text-transform: none; /* Ensure no caps lock */
     position: relative;
-    width: 313px;
+    width: 313px; /* Set the desired width */
+}
+p2 {
+    font-family: 'Poppins', sans-serif;
+    text-transform: none; /* Ensure no caps lock */
+    position: relative;
+    width: 313px; /* Set the desired width */
+}
+p3 {
+    font-family: 'Poppins', sans-serif;
+    text-transform: none; /* Ensure no caps lock */
+    position: relative;
+    width: 313px; /* Set the desired width */
 }
 
 * {
@@ -76,9 +87,10 @@ audio {
     padding: 10px 20px;
     font-weight: 600;
     border-radius: 5px;
-    text-transform: none;
+    text-transform: none; /* Remove caps lock */
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -137,7 +149,7 @@ header {
     text-align: left;
     gap: 80px;
     font-size: 1.2em;
-    text-transform: none;
+    text-transform: none; /* Remove caps lock */
     font-family: 'Poppins', sans-serif;
     text-shadow: 0 0 80px #000;
 }
@@ -150,11 +162,11 @@ header {
     transition: transform 1s;
     grid-row-start: 1;
     grid-row-end: 3;
-    text-transform: none;
+    text-transform: none; /* Remove caps lock */
 }
 
 .slider .list .item .content p {
-    text-transform: none;
+    text-transform: none; /* Ensure no caps lock */
 }
 
 .slider .list .item .content p:last-child {
@@ -203,7 +215,7 @@ header {
     transform: translate(-50%, -50%) rotate(-170deg);
 }
 
-/* Default States */
+/* default  */
 .slider .list .item .image {
     filter: blur(30px);
 }
@@ -232,7 +244,7 @@ header {
     transform: translateY(0);
 }
 
-/* Non-Active Items */
+/* item phía sau */
 .slider .list .item.active ~ .item {
     opacity: 0;
 }
@@ -253,7 +265,7 @@ header {
     transform: translateY(100%);
 }
 
-/* Arrows */
+/* arrows */
 .arrows {
     position: absolute;
     left: 50%;
@@ -295,7 +307,6 @@ header {
     pointer-events: none;
 }
 
-/* Tablet View */
 @media all and (max-width: 1024px) {
     .slider .list .item .content {
         grid-template-columns: repeat(2, 300px);
@@ -306,7 +317,6 @@ header {
     }
 }
 
-/* Mobile View */
 @media all and (max-width: 767px) {
     .slider .list .item .content {
         grid-template-columns: 80%;
@@ -321,20 +331,5 @@ header {
 
     .slider .list .item .content p {
         font-size: small;
-    }
-
-    .arrows {
-        bottom: 20px;
-    }
-
-    .previous, .next {
-        bottom: 15px;
-        padding: 8px 15px;
-        font-size: 14px;
-    }
-
-    audio {
-        width: 200px;
-        height: 30px;
     }
 }
