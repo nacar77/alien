@@ -26,23 +26,11 @@ h2 {
     position: left;
 }
 
-p1 {
+p {
     font-family: 'Poppins', sans-serif;
     text-transform: none; /* Ensure no caps lock */
     position: relative;
-    width: 313px; /* Set the desired width */
-}
-p2 {
-    font-family: 'Poppins', sans-serif;
-    text-transform: none; /* Ensure no caps lock */
-    position: relative;
-    width: 313px; /* Set the desired width */
-}
-p3 {
-    font-family: 'Poppins', sans-serif;
-    text-transform: none; /* Ensure no caps lock */
-    position: relative;
-    width: 313px; /* Set the desired width */
+    /* width: 313px; /* Set the desired width */
 }
 
 * {
