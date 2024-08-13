@@ -5,6 +5,12 @@ body {
     margin: 0;
     background-color: #010101;
     color: #eee;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+    height: 100%;
 }
 
 audio {
