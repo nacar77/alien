@@ -33,6 +33,7 @@ p {
     /* width: 313px; /* Set the desired width */
     margin: 15px 0;
     text-align: center;
+    font-size: 20px; /* Base font size for regular screens */
 }
 
 * {
