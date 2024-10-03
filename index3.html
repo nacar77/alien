@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greetings</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            animation: gradient 5s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ff5e62;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #ff9966;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff5e62;
+        }
+
+        #hiddenMessage {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #ff5e62;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message">
+            <h1>Happy Monthsary, My Alien!</h1>
+            <p>Sending you all my love and happiness on this special day.</p>
+            <p>You are my world, my everything. Here's to many more beautiful moments together.</p>
+        </div>
+        <div class="button-container">
+            <button onclick="displayMessage()">Click for a Surprise</button>
+        </div>
+        <div id="hiddenMessage" class="hidden">
+            <p>💖 You're the best thing that ever happened to me. 💖</p>
+        </div>
+    </div>
+
+    <script>
+        function displayMessage() {
+            const message = document.getElementById("hiddenMessage");
+            if (message.classList.contains("hidden")) {
+                message.classList.remove("hidden");
+            } else {
+                message.classList.add("hidden");
+            }
+        }
+    </script>
+</body>
+</html>
