@@ -17,8 +17,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
             animation: gradient 5s ease infinite;
+            position: relative;
         }
 
         @keyframes gradient {
@@ -39,73 +40,162 @@
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 90%; /* Changed to 90% for responsiveness */
+            max-width: 900px; /* Added a max width for larger screens */
+            margin: auto;
         }
 
         h1 {
-            font-size: 2.5em;
+            font-size: 2em; /* Adjusted font size for better readability */
             margin-bottom: 20px;
             color: #ff5e62;
         }
 
         p {
-            font-size: 1.5em;
+            font-size: 1.1em; /* Adjusted font size for better readability */
             margin-bottom: 15px;
             color: #333;
+            line-height: 1.5; /* Increased line height for better text spacing */
         }
 
-        .button-container {
-            margin-top: 20px;
-        }
-
-        button {
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
             background-color: #ff9966;
             color: white;
             padding: 10px 20px;
-            font-size: 1.2em;
+            font-size: 1em; /* Adjusted for mobile */
             border: none;
             border-radius: 8px;
             cursor: pointer;
             transition: background-color 0.3s;
         }
 
-        button:hover {
+        .nav-button:hover {
             background-color: #ff5e62;
         }
 
-        #hiddenMessage {
-            margin-top: 20px;
-            font-size: 1.5em;
-            color: #ff5e62;
+        .prev {
+            left: 10px; /* Adjusted for mobile */
         }
 
-        .hidden {
-            display: none;
+        .next {
+            right: 10px; /* Adjusted for mobile */
+        }
+
+        .next2-button {
+            position: fixed; /* Keep it fixed to the bottom */
+            bottom: 80px; /* Distance from the bottom of the viewport */
+            left: 97.6%;
+            transform: translateX(-50%);
+            background-color: #ff9966;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1em; /* Adjusted for mobile */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .next2-button:hover {
+            background-color: #ff5e62;
+        }
+
+        .audio-container {
+            position: absolute;
+            bottom: 10px; /* Adjusted for mobile */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em; /* Responsive font size */
+            }
+
+            p {
+                font-size: 1em; /* Responsive font size */
+            }
+
+            .nav-button {
+                font-size: 0.9em; /* Responsive font size */
+                padding: 8px 15px; /* Responsive padding */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em; /* Responsive font size */
+            }
+
+            p {
+                font-size: 0.9em; /* Responsive font size */
+            }
+
+            .nav-button {
+                font-size: 0.8em; /* Responsive font size */
+                padding: 6px 10px; /* Responsive padding */
+            }
         }
     </style>
 </head>
 <body>
+    <button class="nav-button prev" onclick="goToPrevious()">Previous</button>
+    <button class="nav-button next" onclick="goToNext()">Next</button>
+
     <div class="container">
         <div class="message">
             <h1>Happy Monthsary, My Alien!</h1>
-            <p>Sending you all my love and happiness on this special day.</p>
-            <p>You are my world, my everything. Here's to many more beautiful moments together.</p>
-        </div>
-        <div class="button-container">
-            <button onclick="displayMessage()">Click for a Surprise</button>
-        </div>
-        <div id="hiddenMessage" class="hidden">
-            <p>💖 You're the best thing that ever happened to me. 💖</p>
+            <p>Do you know, my alien, since I entered life and entered the relationship we have, 
+                I have become sure of everything and I am willing to love you without making you feel the pain,
+                because I don't want to hurt you, I don't want to hurt the person I love. 
+                I told you it's okay to be hurt, don't let me be the one to hurt the person I love and care for.
+                <br><br>
+                It is okay for me, my alien, because you only worry about me. Sometimes we are the same in that way, 
+                so it's okay. I also want to be aware if it's okay for someone like me, because I know 
+                you face difficult situations. That's why I'm always here for you when you're not around or when you're busy; you have someone to come home to 
+                and waiting like me. So don't worry about me, okay? It's me.
+                <br><br>
+                I can wait even for a long time, and I'm willing to show and make you feel that I'm enough and 
+                I'm loyal to one woman, and that's only you. So while I'm keeping you with me, I'm willing for all the things I can do and show you all that 
+                I love you so much more than you know, that I will admire you in everything because I want only you. I will really love you.
+                <br><br> 
+                So my alien, I hope you can appreciate this simple effort that I made for you. This is my message for all of you who are around you; this is how I admire you in everything. 
+                Here I can express what I feel when you have that in my life. In my message, I hope you can feel what intention I want for you and for the two of us. Above all, thank you to everyone because even though I'm here, I'm with you in everything you want. May it happen in your life and your dreams that I am with you. I am very happy for my part because you all like me, especially the people you are close to. I am very happy because I met you.
+                <br><br>
+                I will take care of myself for you; soon that will be possible when the time comes we can take care of each other together.
+            </p>
+            <p>💖👽💝🦋 You fill my life with joy, love, and laughter, making it infinitely better. 💖👽💝🦋</p>
         </div>
     </div>
 
+    <!-- Background music element -->
+    <div class="audio-container">
+        <audio controls autoplay loop>
+            <source src="assets/music/When God Made You - Winner & Shen _ THE ASIDORS 2021 COVERS - With Lyrics.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- Button for goToNext2 -->
+    <button class="next2-button" onclick="goToNext2()">Main</button>
+
     <script>
-        function displayMessage() {
-            const message = document.getElementById("hiddenMessage");
-            if (message.classList.contains("hidden")) {
-                message.classList.remove("hidden");
-            } else {
-                message.classList.add("hidden");
-            }
+        function goToPrevious() {
+            // Change URL to the previous page or content
+            window.location.href = "index2.html"; // Add your previous page link here
+        }
+
+        function goToNext() {
+            // Change URL to the next page or content
+            window.location.href = "index1.html"; // Add your next page link here
+        }
+
+        function goToNext2() {
+            // Change URL to the next page or content
+            window.location.href = "index.html"; // Add your next page link here
         }
     </script>
 </body>
