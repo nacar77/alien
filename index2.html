@@ -17,8 +17,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
             animation: gradient 5s ease infinite;
+            position: relative;
+            padding: 20px; /* Added padding for mobile */
         }
 
         @keyframes gradient {
@@ -39,6 +41,9 @@
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 100%; /* Changed to 100% for mobile */
+            max-width: 800px; /* Added max-width for better readability */
+            margin: auto;
         }
 
         h1 {
@@ -48,20 +53,16 @@
         }
 
         p {
-            font-size: 1.5em;
+            font-size: 1.2em; /* Adjusted for mobile */
             margin-bottom: 15px;
             color: #333;
-        }
-
-        .button-container {
-            margin-top: 20px;
         }
 
         button {
             background-color: #ff9966;
             color: white;
             padding: 10px 20px;
-            font-size: 1.2em;
+            font-size: 1em; /* Adjusted for mobile */
             border: none;
             border-radius: 8px;
             cursor: pointer;
@@ -72,30 +73,105 @@
             background-color: #ff5e62;
         }
 
-        #hiddenMessage {
-            margin-top: 20px;
-            font-size: 1.5em;
-            color: #ff5e62;
+        /* Styles for audio container */
+        .audio-container {
+            position: fixed; /* Change to fixed to keep it at the bottom */
+            bottom: 10px; /* Position it 10px from the bottom */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Shift left by half of its width */
+            width: auto; /* Set width to auto for better responsiveness */
+            z-index: 10; /* Ensure it appears above other elements */
         }
 
-        .hidden {
-            display: none;
+        /* Styles for Next and Previous buttons */
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #ff9966;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1em; /* Adjusted for mobile */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #ff5e62;
+        }
+
+        .prev {
+            left: 10px; /* Adjusted for smaller screens */
+        }
+
+        .next {
+            right: 10px; /* Adjusted for smaller screens */
+        }
+
+        /* Media queries for additional responsiveness */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em; /* Smaller font size for mobile */
+            }
+
+            p {
+                font-size: 1em; /* Smaller font size for mobile */
+            }
+
+            button {
+                padding: 8px 16px; /* Adjust button padding for mobile */
+                font-size: 0.9em; /* Smaller font size for mobile */
+            }
+
+            .nav-button {
+                font-size: 0.9em; /* Smaller font size for mobile */
+            }
         }
     </style>
 </head>
 <body>
+    <button class="nav-button prev" onclick="goToPrevious()">Previous</button>
+    <button class="nav-button next" onclick="goToNext()">Next</button>
+
     <div class="container">
         <div class="message">
             <h1>Happy Monthsary, My Alien!</h1>
-            <p>Sending you all my love and happiness on this special day.</p>
-            <p>You are my world, my everything. Here's to many more beautiful moments together.</p>
+            <p>After all, we all need someone who would remember us through a busy day.
+                Someone who would send a text in the middle of a tiring day to keep us going.
+                A gift that would make us feel that they know exactly what we need right now.
+                A call that would make us feel more surrounded.
+                <br><br>
+                Alam mo my alien for me ang oras ay hindi hadlang para sa kung ano ang gusto ko
+                alam mo bakit kasi kuntento ako palagi kahit na napaka busy mo
+                madami kang ginagawa ang dali talaga makuntento abutin pa ng ilang oras
+                araw, mananatiling sayo ako.
+                <br><br>
+                Palagi ko sinasabi sayo na andito ako palagi pagdating mo galing
+                sa work mo o mga pupuntahan trust me, sa tuwing pagdating mo meron ako
+                na palaging magpapagaan ng pakiramdam mo, magpapasaya sayo
+                palagi mo lang yan tandaan.
+                <br><br> 
+                Palagi ko ivavalue yung oras na meron ako at oras na meron ka
+                sa ating dalawa handa ako maghintay palagi, maghihintay ako
+                hanggat sa pwede na at wala ng mga distansya sa ating dalawa.
+                <br><br>
+                Willing ako patunayan yon dahil, alam ko sa sarili ko ano intensyon ko tumagal man.
+                Anyways my alien habang tumatagal mga ginagawa natin kahit sa simpleng bagay sobra ko inadmire sa lahat kasama ka po sa lahat,
+                you know my alien ayoko talaga na mawala kana sakin habang sakin ka gagawin ko best ko para mapatunayan intensyon ko sa lahat hindi lang po sayo,
+                kundi lahat po ng nakapaligid sayo papatunayan ko hindi lang sa salita kundi sa gawa alien kasi una palang pinakita ko agad with in action bago ko masabi ganon ako ka
+                interesado na mapasakin at hindi ko masasaktan.</p>
+            <p>💖👽💝🦋 You're the best thing that ever happened to me. 💖👽💝🦋</p>
         </div>
-        <div class="button-container">
-            <button onclick="displayMessage()">Click for a Surprise</button>
-        </div>
-        <div id="hiddenMessage" class="hidden">
-            <p>💖 You're the best thing that ever happened to me. 💖</p>
-        </div>
+    </div>
+
+    <!-- Background music element -->
+    <div class="audio-container">
+        <audio controls autoplay loop>
+            <source src="assets/music/When God Made You - Winner & Shen _ THE ASIDORS 2021 COVERS - With Lyrics.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
     </div>
 
     <script>
@@ -106,6 +182,16 @@
             } else {
                 message.classList.add("hidden");
             }
+        }
+
+        function goToPrevious() {
+            // Change URL to the previous page or content
+            window.location.href = "index1.html"; // Add your previous page link here
+        }
+
+        function goToNext() {
+            // Change URL to the next page or content
+            window.location.href = "index3.html"; // Add your next page link here
         }
     </script>
 </body>
