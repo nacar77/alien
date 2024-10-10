@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greetings</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
+            animation: gradient 5s ease infinite;
+            position: relative;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #ff5e62;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #ff9966;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff5e62;
+        }
+
+        #hiddenMessage {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #ff5e62;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Styles for audio container */
+        .audio-container {
+            position: fixed; /* Changed to fixed to always stay at the bottom */
+            bottom: 10px; /* Adjusted to give some spacing from the bottom */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10; /* Added z-index to ensure it stays above other elements */
+        }
+
+        /* Styles for Next and Previous buttons */
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #ff5e62;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #ff5e62;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Responsive design for mobile */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            p {
+                font-size: 1.1em;
+            }
+
+            button {
+                padding: 8px 16px;
+                font-size: 1em;
+            }
+
+            .nav-button {
+                font-size: 0.9em;
+                padding: 8px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 0.9em;
+            }
+
+            .nav-button {
+                font-size: 0.8em;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="nav-button prev" onclick="goToPrevious()">Previous</button>
+    <button class="nav-button next" onclick="goToNext()">Next</button>
+
+    <div class="container">
+        <div class="message">
+            <h1>Happy Monthsary, My Alien!</h1>
+            <p>I finally understand why Ben&Ben chose
+                the line, “pipiliin ka sa araw-araw" over‚
+                “mamahalin ka sa araw-araw”. Maybe
+                because love is not guaranteed every
+                day. The level‚ intensity‚ kilig‚ and purity
+                of love will never be the same every day
+                but despite all of this‚ I will still choose you.</p>
+            <p>Choosing someone is very different from 
+                loving someone because choosing someone
+                means that despite what or how you
+                feel‚ to the highest and lowest points of
+                life‚ you will still choose them.</p>
+            <p>Anyone can say that they love you‚ but
+                not everyone can choose you when
+                things around you get so difficult. The
+                reality of love is to always choose that
+                person over anything.</p>
+            <p>Hindi araw-araw masaya‚ hindi araw-
+                araw mahal niyo ang isa’t-isa pero sana
+                araw-araw piliin niyong manatili sa
+                tabi ng bawat isa.</p>
+            <p>Hindi man kita mahal sa araw-araw‚
+                pipiliin kita sa araw-araw through
+                our thick and thin.</p>
+            <p>💖👽💝🦋 You make every day brighter and every moment sweeter. 💖👽💝🦋</p>
+        </div>
+    </div>
+
+    <!-- Background music element -->
+    <div class="audio-container">
+        <audio controls autoplay loop>
+            <source src="assets/music/When God Made You - Winner & Shen _ THE ASIDORS 2021 COVERS - With Lyrics.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <script>
+        function goToPrevious() {
+            window.location.href = "index.html"; // Add your previous page link here
+        }
+
+        function goToNext() {
+            window.location.href = "index2.html"; // Add your next page link here
+        }
+    </script>
+</body>
+</html>
