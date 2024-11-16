@@ -252,33 +252,6 @@ h1 {
   box-sizing: border-box;
 }
 
-
-/* Styles for carousel navigation buttons */
-.carousel-navigation {
-  position: absolute;
-  bottom: 250px; /* Adjust to move the buttons up or down */
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 5px; /* Space between the buttons */
-  z-index: 1000; /* Ensure the buttons are on top of other elements */
-}
-
-.carousel-navigation button {
-  background-color: #fff; /* White background for contrast */
-  color: #000; /* Black text color */
-  border: none;
-  border-radius: 5px;
-  padding: 8px 15px; /* Smaller padding for smaller button */
-  font-size: 14px; /* Smaller font size */
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.carousel-navigation button:hover {
-  background-color: #f0f0f0; /* Lighter background on hover */
-}
-
 /* Next Page Button Style */
 .next-page-navigation {
   position: fixed; /* Make it fixed on the screen */
