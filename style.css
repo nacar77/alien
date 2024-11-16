@@ -41,6 +41,19 @@ body {
   border-radius: 10px;
 }
 
+
+/* Style for audio controls */
+audio {
+  position: fixed;
+  top: 760px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 270px;
+  height: 35px;
+  z-index: 200;
+  border-radius: 10px;
+}
+
 /* Full page container */
 #container {
   position: relative;
@@ -146,6 +159,12 @@ h1 {
   background: radial-gradient(circle, rgba(153, 153, 153, 0), transparent);
 }
 
+#music-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
@@ -157,6 +176,11 @@ h1 {
   .quote {
     font-size: 16px; /* Slightly smaller font for readability */
     width: 90%; /* Widen for better fit */
+  }
+
+  audio {
+    width: 200px; /* Reduce audio control size for tablets */
+    height: 30px;
   }
 
   #drag-container, #spin-container {
@@ -190,6 +214,11 @@ h1 {
   #ground {
     width: 400px; /* Even smaller ground effect for phones */
     height: 400px;
+  }
+
+  audio {
+    width: 150px; /* Small audio controls for mobile */
+    height: 25px;
   }
 
   .carousel-navigation {
