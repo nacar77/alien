@@ -1,0 +1,345 @@
+/* Base styling for body */
+body {
+  height: 100%;
+  touch-action: none; /* For touch screens */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  color: #fff;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+/* Styling for the quote */
+.quote {
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  bottom: 20px; /* Adjust to position it near the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;  /* Make it span a good portion of the width */
+  font-family: 'Arial', sans-serif;
+  font-style: italic;
+  line-height: 1.5;
+  z-index: 9999;  /* High z-index to ensure it appears in front of all other elements */
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional background for better readability */
+  border-radius: 10px;
+}
+
+
+
+/* Style for audio controls */
+audio {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 270px;
+  height: 35px;
+  z-index: 200;
+  border-radius: 10px;
+}
+
+/* Full page container */
+#container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Heading Styling */
+h1 {
+  color: #fff;
+  font-size: 3rem; /* Use relative units for better scaling */
+  font-family: 'Snowburst One', cursive;
+  text-align: center;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+/* Snow effect */
+.snow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background-image: url('snow.png');
+  background-size: cover;
+  animation: animationSnow 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes animationSnow {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(100px, 50vh);
+  }
+}
+
+/* Carousel styles */
+#drag-container, #spin-container {
+  position: relative;
+  display: flex;
+  margin: auto;
+  transform-style: preserve-3d;
+  transform: rotateX(-10deg);
+}
+
+
+#drag-container img, #drag-container video {
+  transform-style: preserve-3d;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 200px;
+  font-size: 50px;
+  text-align: center;
+  box-shadow: 0 0 8px #fff;
+  box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+}
+
+#drag-container img:hover, #drag-container video:hover {
+  box-shadow: 0 0 15px #fffd;
+  box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
+}
+
+#drag-container p {
+  font-family: Serif;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(90deg);
+  color: #fff;
+}
+
+/* Ground and 3D Effect */
+#ground {
+  width: 900px;
+  height: 900px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(90deg);
+  background: radial-gradient(circle, rgba(153, 153, 153, 0), transparent);
+}
+
+#music-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem; /* Smaller font size for tablets */
+  }
+
+  audio {
+    width: 200px; /* Reduce width for tablets */
+    height: 30px;
+  }
+
+  #drag-container, #spin-container {
+    transform: rotateX(-5deg); /* Adjust tilt */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem; /* Even smaller font size for phones */
+    top: 10px; /* Adjusted position */
+  }
+
+  #container {
+    height: auto; /* Allow for content to flow naturally */
+    padding: 10px; /* Add some padding for better layout */
+  }
+
+  #ground {
+    width: 600px; /* Smaller ground effect */
+    height: 600px;
+  }
+
+  audio {
+    width: 150px; /* Reduce audio control size for small screens */
+    height: 25px;
+  }
+}
+
+/* General Container Styles */
+#flipping-carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px; /* Perspective for 3D effect */
+}
+
+.flipping-carousel {
+  display: flex;
+  gap: 20px; /* Space between cards */
+  transition: transform 1s;
+}
+
+/* Flip Card Styles */
+.flip-card {
+  background-color: transparent;
+  width: 200px; /* Adjust size as needed */
+  height: 300px;
+  perspective: 1000px; /* Perspective for 3D effect */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.flip-card-front {
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white (adjust the 0.5 for more or less transparency) */
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-card-back {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black (adjust the 0.5 for more or less transparency) */
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+/* Styles for carousel navigation buttons */
+.carousel-navigation {
+  position: absolute;
+  bottom: 250px; /* Adjust to move the buttons up or down */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px; /* Space between the buttons */
+  z-index: 1000; /* Ensure the buttons are on top of other elements */
+}
+
+.carousel-navigation button {
+  background-color: #fff; /* White background for contrast */
+  color: #000; /* Black text color */
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px; /* Smaller padding for smaller button */
+  font-size: 14px; /* Smaller font size */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-navigation button:hover {
+  background-color: #f0f0f0; /* Lighter background on hover */
+}
+
+/* Next Page Button Style */
+.next-page-navigation {
+  position: fixed; /* Make it fixed on the screen */
+  bottom: 200px; /* Position it a bit higher from the bottom */
+  left: 50%; /* Center it horizontally */
+  transform: translateX(-50%); /* Adjust to center perfectly */
+  z-index: 100; /* Ensure it appears above other content */
+  margin-top: 0; /* Remove any margin */
+  text-align: center;
+}
+
+.next-page-navigation button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px; /* Smaller padding */
+  font-size: 1rem; /* Smaller font size */
+  border: none;
+  border-radius: 25px; /* Smaller radius for a slightly more compact look */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.next-page-navigation button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.next-page-navigation a {
+  text-decoration: none;
+}
+
+
+/* Keyframe animation for spinning effect */
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes spinRevert {
+  from {
+    transform: rotateY(360deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
