@@ -164,96 +164,76 @@ h1 {
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
   h1 {
-    font-size: 2.5rem; /* Smaller font size for tablets */
+    font-size: 2rem; /* Smaller font size for tablets */
+    top: 10px; /* Adjusted position */
+  }
+
+  .quote {
+    font-size: 16px; /* Slightly smaller font for readability */
+    width: 90%; /* Widen for better fit */
   }
 
   audio {
-    width: 200px; /* Reduce width for tablets */
+    width: 200px; /* Reduce audio control size for tablets */
     height: 30px;
   }
 
   #drag-container, #spin-container {
-    transform: rotateX(-5deg); /* Adjust tilt */
+    transform: rotateX(-5deg); /* Adjust tilt for tablets */
+  }
+
+  #ground {
+    width: 600px; /* Reduced size for tablets */
+    height: 600px;
   }
 }
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 2rem; /* Even smaller font size for phones */
-    top: 10px; /* Adjusted position */
+    font-size: 1.8rem; /* Smaller font size for phones */
+    top: 5px; /* Adjusted position */
+  }
+
+  .quote {
+    font-size: 14px; /* Further reduced font size for small screens */
+    padding: 8px; /* Compact padding */
+    width: 95%; /* Make it wider to fit content better */
   }
 
   #container {
-    height: auto; /* Allow for content to flow naturally */
-    padding: 10px; /* Add some padding for better layout */
+    height: auto; /* Allow content to flow naturally */
+    padding: 10px; /* Padding for better layout */
+    overflow-y: auto; /* Enable scrolling if needed */
   }
 
   #ground {
-    width: 600px; /* Smaller ground effect */
-    height: 600px;
+    width: 400px; /* Even smaller ground effect for phones */
+    height: 400px;
   }
 
   audio {
-    width: 150px; /* Reduce audio control size for small screens */
+    width: 150px; /* Small audio controls for mobile */
     height: 25px;
+  }
+
+  .carousel-navigation {
+    bottom: 180px; /* Adjusted to position navigation better */
+  }
+
+  .next-page-navigation {
+    bottom: 150px; /* Higher positioning for next-page button */
+  }
+
+  .flip-card {
+    width: 150px; /* Smaller flip card size */
+    height: 250px;
+  }
+
+  .flip-card-front img {
+    object-fit: cover;
   }
 }
 
-/* General Container Styles */
-#flipping-carousel-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  perspective: 1000px; /* Perspective for 3D effect */
-}
-
-.flipping-carousel {
-  display: flex;
-  gap: 20px; /* Space between cards */
-  transition: transform 1s;
-}
-
-/* Flip Card Styles */
-.flip-card {
-  background-color: transparent;
-  width: 200px; /* Adjust size as needed */
-  height: 300px;
-  perspective: 1000px; /* Perspective for 3D effect */
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transform-style: preserve-3d;
-  transition: transform 0.8s;
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.flip-card-front {
-  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white (adjust the 0.5 for more or less transparency) */
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.flip-card-front img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 .flip-card-back {
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black (adjust the 0.5 for more or less transparency) */
