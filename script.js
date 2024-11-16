@@ -20,67 +20,6 @@ for (var i = 0; i < 50; i++) {
   container.appendChild(div);
 }
 
-// Wait for the DOM to fully load before running the script
-document.addEventListener("DOMContentLoaded", function () {
-  const flipCards = document.querySelectorAll('.flip-card-inner'); // Select all flip-card-inner elements
-  let currentIndex = 0;
-  const flipInterval = 3000; // Time in milliseconds (3000ms = 3 seconds)
-
-  function flipCard() {
-      // Remove flip effect from all cards
-      flipCards.forEach(card => {
-          card.style.transform = 'rotateY(0deg)';
-      });
-
-      // Add flip effect to the current card
-      flipCards[currentIndex].style.transform = 'rotateY(180deg)';
-
-      // Update the index to the next card, loop back to 0 when reaching the end
-      currentIndex = (currentIndex + 1) % flipCards.length;
-  }
-
-  // Start the automatic flipping of the cards
-  setInterval(flipCard, flipInterval);
-});
-
-
-// Get references to both carousels and the navigation buttons
-const carousel3DContainer = document.getElementById('carousel-3d-container');
-const flippingCarouselContainer = document.getElementById('flipping-carousel-container');
-const show3DCarouselBtn = document.getElementById('show-3d-carousel');
-const showFlippingCarouselBtn = document.getElementById('show-flipping-carousel');
-
-const flipCards = document.querySelectorAll('.flip-card');
-let currentFlipIndex = 0;
-
-// Function to switch to the 3D carousel
-show3DCarouselBtn.addEventListener('click', () => {
-    flippingCarouselContainer.style.display = 'none';
-    carousel3DContainer.style.display = 'block';
-});
-
-// Function to switch to the flipping carousel
-showFlippingCarouselBtn.addEventListener('click', () => {
-    carousel3DContainer.style.display = 'none';
-    flippingCarouselContainer.style.display = 'block';
-});
-
-// Function to show a specific flip card
-function showFlipCard(index) {
-    flipCards.forEach((card, i) => {
-        card.querySelector('.flip-card-inner').style.transform = 'rotateY(0deg)'; // Reset flip
-        if (i === index) {
-            card.querySelector('.flip-card-inner').style.transform = 'rotateY(180deg)'; // Flip the active card
-        }
-    });
-}
-
-
-
-// Show the first flip card initially
-showFlipCard(currentFlipIndex);
-
-
 // 3D carousel setup
 var radius = 240; // how big of the radius
 var autoRotate = true; // auto rotate or not
@@ -187,4 +126,3 @@ document.onmousewheel = function (e) {
   radius += d;
   init(1);
 };
-
