@@ -46,7 +46,7 @@ body {
 /* Style for audio controls */
 audio {
   position: fixed;
-  top: 18px;
+  top: 760px;
   left: 50%;
   transform: translateX(-50%);
   width: 270px;
