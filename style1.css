@@ -67,7 +67,7 @@
 /* Audio Controls */
 audio {
     position: fixed;
-    top: -600px;
+    top: 18px;
     left: 50%;
     transform: translateX(-50%);
     width: 270px;
