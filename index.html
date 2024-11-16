@@ -1,88 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sweet Messages For You Alien</title>
-
-  <link rel="stylesheet" href="header.css">
-  <link rel="stylesheet" href="main.css">
-  <!--<link rel="stylesheet" href="footer.css">//-->
-  <link rel="stylesheet" href="styles.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@900&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,700&family=Shrikhand&display=swap" rel="stylesheet">
-  
-
-  <script src="https://kit.fontawesome.com/effd3867de.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Monthsary</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-<div style="text-align: center;">
-  <button onclick="playAudio()">Click to Play</button>
-  <audio id="myAudio" controls>
-    <source src="Nag iisa Part 2 - Vlync (Cover by ICA).mp3" type="audio/ogg">
-    <source src="Nag iisa Part 2 - Vlync (Cover by ICA).mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-</div>
+    <!-- Background Music -->
+    <audio autoplay controls>
+        <source src="music.ogg" type="audio/ogg">
+        <source src="ONLY LOVE - COVER BY 七元 (QI YUAN) (ORIGINAL BY TRADEMARK) LYRICS.mp3" type="audio/mpeg">
+    </audio>
 
-<script>
-  function playAudio() {
-    var audio = document.getElementById("myAudio");
-    audio.play();
-  }
-</script>
-      </div>
-    <section class="gallery">
-    <div class="photos">
-      <img src="photo1.jpg" alt="Memory 1">
-      <img src="photo2.jpg" alt="Memory 2">
-      <img src="photo3.jpg" alt="Memory 3">
-    </section>
-  </div>
-  </section>
-    
-  <main>
-    <div class="section-a">
-      <div class="text-section">
-        <div class="title">
-          <p>MESSAGE FOR MY ALIEN SO, HAPPY MONTHSARRY</p>
+    <!-- Central Container -->
+    <div id="container">
+        <h1>HAPPY 9TH MONTHSARY MY ALIEN <br> 😘👽🥰🦋💕💝</h1>
+
+        <!-- Snow Effect -->
+        <div class="snow"></div>
+
+        <!-- 3D Carousel -->
+        <div id="carousel-3d-container" class="carousel-container">
+            <div id="drag-container">
+                <div id="spin-container">
+                    <!-- Carousel Images and Videos -->
+                    <img src="1.jpg" alt="">
+                    <img src="2.jpeg" alt="">
+                    <img src="3.jpeg" alt="">
+                    <img src="4.jpeg" alt="">
+                    <img src="5.jpeg" alt="">
+                    <img src="6.jpeg" alt="">
+
+                    <a target="_blank" href="https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg">
+                        <img src="https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""/>
+                    </a>
+
+                    <video controls autoplay="autoplay" loop muted>
+                        <source src="7.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div id="ground"></div>
+            </div>
         </div>
-        <div class="description">
-          <p>This love, ours is a rare and precious thing.👽 It's a tapestry woven with laughter, tears, triumphs and vulnerabilities.👽 It's the comfort of a familiar embrace the thrill of discovering new depths within each other and the unwavering belief that together we can face anything.👽 Make them feel loved and valued.
-            I Created this for my alien👽 So, my love to you my once in a lifetime kind of love thank you for everything you are and everything we've built together.👽 Here's to forever etching our story in the stars a testament to a love that burns ever bright.✨"
-            "Distance means so little, when someone means so much.👽 There are no goodbyes for us. Wherever you are you will always be in my heart.👽✨"</p>
-        </div>
-      </div>
+
+        <!-- Quote -->
+        <blockquote class="quote">
+            "In a world full of temporary things, you are my forever. Thank you for being the light of my life and for making every moment together so special. You complete me in ways words can't explain, and I am grateful for every second with you. Here's to many more beautiful moments together, my alien.😘👽🥰💝🦋💕"
+        </blockquote>
     </div>
 
-    <div class="section-b">
-      <div class="container">
-        <div class="message">
-          <div class="border">
-            <p class="textMessage"></p>
-          </div>
-        </div>
-        <div class="generate">
-          <button id="gen-text">Generate Message</button>
-        </div>
-      </div>
+    <!-- Separate Navigation to Next Page -->
+    <div class="next-page-navigation">
+        <a href="index1.html"><button>Next Page</button></a>
     </div>
-  </main>
-  <!--<footer class="footer">
-    <p>👽 Jayson Nacar 👽</p>
-    <div class="socials">
-        <a href="https://www.facebook.com/friendly.jayson1" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100083913429127" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-    </div>
-    <div class="credits">
-      <small> THANK YOU FOR ALWAYS MAKE ME HAPPY EVERY DAY MY ALIEN </small>
-  </div>
-</footer>//-->
 
-  <script src="index.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
