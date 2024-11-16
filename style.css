@@ -42,6 +42,7 @@ body {
 }
 
 
+
 /* Style for audio controls */
 audio {
   position: fixed;
@@ -250,6 +251,7 @@ h1 {
   padding: 20px;
   box-sizing: border-box;
 }
+
 
 /* Next Page Button Style */
 .next-page-navigation {
