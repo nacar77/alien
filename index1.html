@@ -16,17 +16,24 @@
         }
 
         /* Body styling */
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh; /* Ensure full window height */
-            background: linear-gradient(to right, #f0f4f8, #dbe2e8);
-            color: #333;
-            padding: 20px; /* Add padding */
-            font-family: 'Raleway', sans-serif;
-            overflow-x: hidden;
-        }
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure full window height */
+    background: linear-gradient(to right, #f0f4f8, #dbe2e8);
+    color: #333;
+    padding: 20px; /* Add padding */
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* HTML styling */
+html {
+    height: 100%;
+    overflow-y: auto; /* Allow scrolling when content overflows */
+}
 
         /* Container for the quotes */
         .quote-container {
