@@ -1,24 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Snowburst+One&display=swap');
 
-/* Base Styling for Body */
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    touch-action: none; /* For touch screens */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #000;
-    color: #fff;
-    -webkit-perspective: 1000px;
-    perspective: 1000px;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    overflow: hidden;
-}
-
-
 /* Full Page Container */
 #container {
     position: relative;
@@ -33,19 +14,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-/* Heading Styling */
-h1 {
-    color: #fff;
-    font-size: 3rem; /* Use relative units for better scaling */
-    font-family: 'Snowburst One', cursive;
-    text-align: center;
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
 }
 
 /* Snow Effect */
