@@ -1,4 +1,4 @@
-/* Base styling for body (Desktop view) */
+/* Base styling for body */
 body {
   height: 100%;
   touch-action: none; /* For touch screens */
@@ -14,17 +14,6 @@ body {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   overflow: hidden;
-}
-
-/* Media query for mobile screens */
-@media (max-width: 480px) {
-  body {
-    flex-direction: column; /* Stack content vertically */
-    padding: 10px; /* Add some padding for better readability */
-    overflow-y: auto; /* Enable vertical scrolling if needed */
-    align-items: flex-start; /* Align content to the start for a better layout */
-    justify-content: flex-start; /* Adjust positioning to better handle content */
-  }
 }
 
 /* Styling for the quote */
