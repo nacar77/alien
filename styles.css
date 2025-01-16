@@ -31,7 +31,8 @@ header .overlay {
 /* Responsive adjustments for mobile devices */
 @media (max-width: 768px) {
     header .overlay {
-        background-size: cover; /* Keeps full coverage */
+        background-size: contain; /* Keeps full coverage */
+        background-repeat: repeat;
         background-position: center top; /* Adjust the position for mobile */
     }
 }
