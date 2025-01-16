@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    font-family: 'serif', Times, Times New Roman, serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+header {
+    position: relative;
+    height: 25vh;
+    background: url('wedding-banner.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+header h1 {
+    position: relative;
+    font-family: 'serif', Times, Times New Roman, serif;
+    font-size: 3rem;
+    margin: 0;
+    z-index: 1;
+}
+header p {
+    position: relative;
+    font-size: 1.5rem;
+    z-index: 1;
+    font-family: 'serif', Times, Times New Roman, serif;
+}
+header .button {
+    margin-top: 1rem;
+    z-index: 1;
+}
+header .button a {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #ff6b6b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+h3 {
+    text-align: center;
+    font-family: 'serif', Times, Times New Roman, serif;
+    font-size: 2rem;
+    margin: 0;
+}
+section {
+    padding: 20px;
+}
+.slider {
+    overflow: hidden;
+}
+.slider-row {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px 0;
+    justify-content: center;
+    align-items: center;
+}
+.slider-row img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+.slider-row img:hover {
+    transform: scale(1.1);
+}
+.countdown {
+    text-align: center;
+    font-family: 'serif', Times, Times New Roman, serif;
+    font-size: 2rem;
+}
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    header p {
+        font-size: 1.2rem;
+    }
+    .slider-row img {
+        max-width: 180px;
+    }
+}
+@media (max-width: 768px) {
+    header {
+        height: 50vh;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+    .slider-row img {
+        max-width: 150px;
+    }
+}
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    header p {
+        font-size: 0.9rem;
+    }
+    .slider-row img {
+        max-width: 120px;
+    }
+}
+
+#timer {
+    font-family: 'serif', Times, Times New Roman, serif;
+    background-color: #f0f8ff;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 90%;
+    margin: 20px auto;
+    line-height: 1.6;
+    font-size: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+#timer:hover {
+    background-color: #e6f7ff;
+    transform: scale(1.05);
+}
+
+#timer::before {
+    content: "💖👽💕 Monthsary Message 💖👽💕";
+    font-weight: bold;
+    font-size: 24px;
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #0077cc;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    #timer {
+        font-size: 16px;
+    }
+}
