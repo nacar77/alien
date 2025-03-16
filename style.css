@@ -102,14 +102,11 @@ body {
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.205);
-    padding: 5px 10px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px #00000015;
 }
 
 audio {
-    width: 250px;
+    width: 250px; /* Increased width */
+    height: 25px; /* Increased height for better control visibility */
     outline: none;
 }
 
